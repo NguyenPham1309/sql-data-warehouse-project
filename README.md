@@ -70,16 +70,25 @@ The repository is organized as follows:
 
 ```text
 PwC Swiss_Nguyen Khoi Nguyen Pham_Churn rate analysis.pbix # The main Power BI file
-├── data/                                                 # For the datasets
-│   └── 02 Churn-Dataset.csv
-├── dax/                                                  # For dax script including measures
-│   └── dax_measures and logics.md
-├── images/                                               # For screenshots of my dashboard
-│   ├── PwC Swiss_Data Analysis by PBI_Nguyen Khoi Nguyen Pham-08.png
-│   ├── PwC Swiss_Data Analysis by PBI_Nguyen Khoi Nguyen Pham-09.png
-│   ├── Create the dynamic Churning ratio.png
-│   ├── Create the tables for static segmentation.png
-│   ├── Table of monthly charge.png
-│   └── Table of total charge.png
+├── datasets/                                             # For the datasets
+│   └── sources.crm
+|       └── cust_info.csv
+|       └── prd_info.csv
+|       └── sales_details.csv
+|   └── sources.erp
+|       └── cust_az12.csv
+|       └── loc_a101.csv
+|       └── px_cat_g1v2.csv
+├── docs/                                                 # Related docs
+│   └── 
+├── img/                                                  # For the image of the architecture 
+│   ├── architecture.drawio.png
+|── scripts/                                              # Scripts to load and transform the data
+│   ├── bronze_create_tables.sql
+│   ├── bronze_loading_data_1st_table_bronze.crm_cust_info.sql
+│   ├── bronze_loading_data_all_other_tables.sql
+│   ├── bronze_stored procedure.sql
+│   └── init_database.sql
+|── tests/ 
 ├── .gitignore                                            # Specifies intentionally untracked files
 └── README.md                                             # This file!
